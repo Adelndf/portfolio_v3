@@ -1,5 +1,8 @@
 {
   "nav_home": "الرئيسية",
-  "nav_about": "عني",
-  "nav_download_CV": "تحميل السيرة الذاتية"
+  "nav_work": "أعمالي",
+  "nav_skills": "المهارات",
+  "nav_contact": "تواصل معي",
+  "nav_lang": "English",
+  "nav_changeLang": "en"
 }

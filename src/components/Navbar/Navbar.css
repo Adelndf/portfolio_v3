@@ -2,6 +2,9 @@
   height: 60px;
   background: var(--white-clr);
   box-shadow: var(--shadow);
+  z-index: 999;
+  position: sticky;
+  top: 0;
 }
 .navbar__container {
   height: 100%;
@@ -28,6 +31,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  height: 100%;
 }
 .navbar__mid > a {
   font-size: 1rem;
@@ -39,8 +43,11 @@
   color: var(--gray-clr);
   transition: var(--transition-300);
   position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .navbar__mid > a::after {
   content: "";
   position: absolute;
@@ -54,14 +61,16 @@
   transition: var(--transition-300);
 }
 .navbar__mid > a:hover::after {
-  background: var(--theme-clr);
-  width: 100%;
+  width: 50%;
 }
 
 .navbar__mid > a.active {
   color: var(--theme-clr);
 }
-
+.navbar__mid > a.active::after {
+  background: var(--theme-clr);
+  width: 100%;
+}
 .navbar__right {
   width: 100px;
   text-align: right;

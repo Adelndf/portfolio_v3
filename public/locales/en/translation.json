@@ -1,5 +1,8 @@
 {
-  "nav_home": "Home",
-  "nav_about": "About",
-  "nav_download_CV": "Download CV"
+  "nav_home": "home",
+  "nav_work": "work",
+  "nav_skills": "skills",
+  "nav_contact": "hire me",
+  "nav_lang": "العربية",
+  "nav_changeLang": "ar"
 }
