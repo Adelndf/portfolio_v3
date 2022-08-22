@@ -1,0 +1,79 @@
+.navbar {
+  height: 60px;
+  background: var(--white-clr);
+  box-shadow: var(--shadow);
+}
+.navbar__container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.navbar__left {
+  width: 100px;
+}
+.navbar__left > p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--black-clr);
+}
+.navbar__left > p > span {
+  color: var(--theme-clr);
+  transition: var(--transition-300);
+}
+
+.navbar__mid {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.navbar__mid > a {
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  width: 6.25rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--gray-clr);
+  transition: var(--transition-300);
+  position: relative;
+}
+
+.navbar__mid > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gray-clr);
+  height: 2px;
+  width: 0;
+  border-radius: 5px;
+  transition: var(--transition-300);
+}
+.navbar__mid > a:hover::after {
+  background: var(--theme-clr);
+  width: 100%;
+}
+
+.navbar__mid > a.active {
+  color: var(--theme-clr);
+}
+
+.navbar__right {
+  width: 100px;
+  text-align: right;
+}
+
+.navbar__lang {
+  font-size: 1rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  color: var(--gray-clr);
+  transition: var(--transition-150);
+}
+.navbar__lang:hover {
+  color: var(--theme-clr);
+}
