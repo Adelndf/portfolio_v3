@@ -4,5 +4,10 @@
   "nav_skills": "المهارات",
   "nav_contact": "تواصل معي",
   "nav_lang": "English",
-  "nav_changeLang": "en"
+  "nav_changeLang": "en",
+  "main_name": "مرحباً, انا عادل",
+  "main_nameSpan": "أقوم ببرمجة الـ Frontend",
+  "main_desc": "رحلة ألف ميل تبدأ بخطوة، ورحلتي بدأت عند كتابة أول سطر كود وهو console.log('Hello World')، خطتي هي تطوير المهارات وبناء مهارات جديده دائماً من خلال البرمجة وإنشاء المشاريع يومياً.",
+  "main_theme": "قبل أن نبدأ إختر",
+  "main_themeSpan": "لونك المفضل"
 }

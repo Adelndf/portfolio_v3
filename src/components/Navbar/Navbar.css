@@ -73,7 +73,6 @@
 }
 .navbar__right {
   width: 100px;
-  text-align: right;
 }
 
 .navbar__lang {
@@ -85,4 +84,19 @@
 }
 .navbar__lang:hover {
   color: var(--theme-clr);
+}
+
+.navbar__menu {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .navbar__mid {
+    display: none;
+  }
+  .navbar__menu {
+    display: block;
+  }
+  .navbar__left {
+    flex: 1;
+  }
 }

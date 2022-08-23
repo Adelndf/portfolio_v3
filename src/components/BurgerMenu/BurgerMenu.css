@@ -1,0 +1,47 @@
+.burgerMenu {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.burgerMenu > span {
+  height: 2px;
+  border-radius: 2px;
+  background: var(--black-clr);
+  transition: var(--transition-150);
+  position: absolute;
+  width: 20px;
+}
+
+.burgerMenu > span:first-child {
+  left: 5px;
+  top: 10px;
+}
+.burgerMenu > span:nth-child(2) {
+  left: 5px;
+  top: 15px;
+}
+.burgerMenu > span:nth-child(3) {
+  left: 5px;
+  top: 20px;
+}
+
+.burgerMenu.active span {
+  background: var(--theme-clr);
+}
+.burgerMenu.active span:first-child {
+  transform: rotate(45deg);
+  top: 15px;
+  width: 22px;
+}
+.burgerMenu.active span:nth-child(2) {
+  left: 30px;
+  opacity: 0;
+  width: 10px;
+}
+.burgerMenu.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 15px;
+  width: 22px;
+}

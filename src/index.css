@@ -20,11 +20,26 @@
 
   /* screen */
   --max-width: 1200px;
-
   /* theme */
   --theme-clr: rgb(104, 107, 255);
-  /* --theme-clr: rgb(104, 228, 188); */
-  /* --theme-clr: rgb(228, 104, 104); */
+  --theme-clr-alt: rgb(38, 40, 151);
+}
+
+.app.blue {
+  --theme-clr: rgb(104, 107, 255);
+  --theme-clr-alt: rgb(38, 40, 151);
+}
+.app.red {
+  --theme-clr: rgb(228, 104, 104);
+  --theme-clr-alt: rgb(150, 36, 36);
+}
+.app.green {
+  --theme-clr: rgb(59, 138, 109);
+  --theme-clr-alt: rgb(109, 224, 182);
+}
+
+.app {
+  overflow: hidden;
 }
 
 body {

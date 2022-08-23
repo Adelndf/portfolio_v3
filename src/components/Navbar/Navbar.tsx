@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./Navbar.css";
 import { useTranslation } from "react-i18next";
 import cookies from "js-cookie";
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 const languages = [
   {
@@ -81,13 +82,30 @@ const Navbar = () => {
             {t("nav_contact")}
           </a>
         </div>
-        <div className="navbar__right">
+        <div
+          style={
+            currentLanguage.code === "ar"
+              ? { textAlign: "left" }
+              : { textAlign: "right" }
+          }
+          className="navbar__right"
+        >
           <span
             onClick={() => i18n.changeLanguage(t("nav_changeLang"))}
             className="navbar__lang"
           >
             {t("nav_lang")}
           </span>
+        </div>
+        <div
+          className="navbar__menu"
+          style={
+            currentLanguage.code === "ar"
+              ? { paddingRight: 10 }
+              : { paddingLeft: 10 }
+          }
+        >
+          <BurgerMenu />
         </div>
       </div>
     </nav>
