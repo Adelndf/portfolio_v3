@@ -1,9 +1,11 @@
-import { useState } from "react";
 import "./BurgerMenu.css";
 
-const BurgerMenu = () => {
-  const [toggle, setToggle] = useState(false);
+interface Porps {
+  toggle: boolean;
+  setToggle: (value: boolean) => void;
+}
 
+const BurgerMenu = ({ toggle, setToggle }: Porps) => {
   return (
     <div
       onClick={() => setToggle(!toggle)}

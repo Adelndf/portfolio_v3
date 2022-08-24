@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Navbar.css";
 import { useTranslation } from "react-i18next";
 import cookies from "js-cookie";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
+import useClickOutside from "../../hooks/useClickOutside";
 
 const languages = [
   {
@@ -19,11 +20,14 @@ const languages = [
 
 const Navbar = () => {
   const [active, setActive] = useState("home");
+  const [toggle, setToggle] = useState(false);
   const { t, i18n } = useTranslation();
   const currentLanguageCookie = cookies.get("i18next") || "en";
   const currentLanguage: any = languages.find(
     (l) => l.code === currentLanguageCookie
   );
+  const ref = useRef(null);
+  useClickOutside(ref, () => setToggle(false));
 
   useEffect(() => {
     document.body.dir = currentLanguage.dir;
@@ -45,10 +49,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav ref={ref} className="navbar">
       <div className="navbar__container screen-width">
         <div className="navbar__left">
-          <p>
+          <p onClick={() => window.top}>
             Adel<span>Dev</span>
           </p>
         </div>
@@ -105,8 +109,19 @@ const Navbar = () => {
               : { paddingLeft: 10 }
           }
         >
-          <BurgerMenu />
+          <BurgerMenu toggle={toggle} setToggle={setToggle} />
         </div>
+      </div>
+
+      {/* mobile */}
+      <div
+        onClick={() => setToggle(false)}
+        className={toggle ? "navbar__mobile active" : "navbar__mobile"}
+      >
+        <a href="#home">{t("nav_home")}</a>
+        <a href="#work">{t("nav_work")}</a>
+        <a href="#skills">{t("nav_skills")}</a>
+        <a href="#contact">{t("nav_contact")}</a>
       </div>
     </nav>
   );

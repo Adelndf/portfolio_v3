@@ -1,9 +1,10 @@
 .navbar {
   height: 60px;
+  width: 100%;
   background: var(--white-clr);
   box-shadow: var(--shadow);
   z-index: 999;
-  position: sticky;
+  position: fixed;
   top: 0;
 }
 .navbar__container {
@@ -89,6 +90,42 @@
 .navbar__menu {
   display: none;
 }
+.navbar__mobile {
+  display: flex;
+  flex-direction: column;
+  background: var(--white-clr);
+  position: absolute;
+  top: -300px;
+  opacity: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: var(--transition-300);
+}
+.navbar__mobile > a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--theme-clr);
+  font-weight: bold;
+  transition: var(--transition-300);
+}
+.navbar__mobile > a:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.navbar__mobile > a:hover {
+  background: #eee;
+}
+.navbar__mobile.active {
+  top: 80px;
+  opacity: 1;
+}
+
 @media screen and (max-width: 768px) {
   .navbar__mid {
     display: none;
