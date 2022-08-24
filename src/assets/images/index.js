@@ -12,6 +12,8 @@ export { default as imgSass } from "./sass.png";
 export { default as imgTypescript } from "./typescript.png";
 export { default as imgJavascript } from "./JavaScript.png";
 
-// main images
-export { default as imgMainImage } from "./main-img.png";
-export { default as imgSkills } from "./skills.png";
+// websites images
+export { default as imgAdiBlog } from "./adiblog.png";
+export { default as imgYT } from "./ytClone.png";
+export { default as imgPizza } from "./pizza.png";
+export { default as imgCovid19 } from "./covid19.png";

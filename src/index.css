@@ -11,8 +11,6 @@
   --gray-clr: #777;
 
   /* Btn */
-  --btn-bg: linear-gradient(to right, #68e4bc 0%, #4ad0d1 99%);
-  --btn-shadow: 0 12px 12px -11px #0db4afb8;
 
   /* transition */
   --transition-300: all 0.3s ease-in-out;
@@ -28,14 +26,20 @@
 .app.blue {
   --theme-clr: rgb(104, 107, 255);
   --theme-clr-alt: rgb(38, 40, 151);
+  --btn-bg: linear-gradient(to right, #6a68e4 0%, #584ad1 99%);
+  --btn-shadow: 0 12px 12px -11px #180db4b8;
 }
 .app.red {
   --theme-clr: rgb(228, 104, 104);
   --theme-clr-alt: rgb(150, 36, 36);
+  --btn-bg: linear-gradient(to right, #e46868 0%, #d14a4a 99%);
+  --btn-shadow: 0 12px 12px -11px #b40d0db8;
 }
 .app.green {
   --theme-clr: rgb(59, 138, 109);
   --theme-clr-alt: rgb(109, 224, 182);
+  --btn-bg: linear-gradient(to right, #68e4bc 0%, #4ad0d1 99%);
+  --btn-shadow: 0 12px 12px -11px #0db4afb8;
 }
 
 .app {
@@ -50,7 +54,8 @@ body {
 button,
 input,
 select,
-textarea {
+textarea,
+button {
   font-family: "Cairo", sans-serif;
 }
 
@@ -58,6 +63,7 @@ textarea {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -78,7 +84,6 @@ html {
     font-size: 16px;
   }
 }
-
 .screen-width {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -86,5 +91,33 @@ html {
 @media screen and (max-width: 1201px) {
   .screen-width {
     padding: 0 20px;
+  }
+}
+
+.title {
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--black-clr);
+  position: relative;
+}
+.title > span {
+  color: var(--theme-clr);
+  transition: var(--transition-300);
+}
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--black-clr);
+  height: 2px;
+  border-radius: 5px;
+}
+@media screen and (max-width: 500px) {
+  .title {
+    line-height: 1.2;
   }
 }

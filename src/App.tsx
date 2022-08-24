@@ -1,6 +1,6 @@
 import { useAppSelector } from "./app/hooks";
 import { Navbar } from "./components";
-import { Main } from "./sections";
+import { Main, Work } from "./sections";
 
 function App() {
   const { theme } = useAppSelector((state) => state.theme);
@@ -9,6 +9,7 @@ function App() {
     <div className={`app ${theme}`}>
       <Navbar />
       <Main />
+      <Work />
     </div>
   );
 }

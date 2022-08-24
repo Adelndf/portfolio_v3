@@ -10,7 +10,7 @@ const Main = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="main screen-width">
+    <section id="home" className="main screen-width">
       <div className="main__left">
         <div className="main__header">
           <h1>

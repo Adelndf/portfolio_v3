@@ -8,9 +8,16 @@
   "main_name": "مرحباً, انا عادل",
   "main_name1": "مرحباً..",
   "main_name2": "انا عادل",
-
   "main_nameSpan": "أقوم ببرمجة الـ Frontend",
   "main_desc": "رحلة ألف ميل تبدأ بخطوة، ورحلتي بدأت عند كتابة أول سطر كود وهو console.log('Hello World')، خطتي هي تطوير المهارات وبناء مهارات جديده دائماً من خلال البرمجة وإنشاء المشاريع يومياً.",
   "main_theme": "قبل أن نبدأ إختر",
-  "main_themeSpan": "لونك المفضل"
+  "main_themeSpan": "لونك المفضل",
+  "work__title1": "قسم",
+  "work__titleSpan": "الإبداع",
+  "work__title2": "والأعمال",
+  "work__adiBlogDesc": "مشروعي الخاص عبارة عن مدونات أو منشورات انشئ بإستخدام الـ MERN ستاك تيكنولوجي.",
+  "work__YTDesc": "شبيه YouTube انشئ بإستخدام React.js ولغة Typescript، يتم جلب المقاطع الجديده من الذكاء الاصطناعي الخاص بـ YouTube.",
+  "work__PizzaDesc": "بناء واجهه أمامية لمطعم بتصميم UI جميل، لايوجد Functionality في الموقع، فقط HTML | CSS | JavaScript",
+  "work__Covid19Desc": "متعقب حالات كورونا، انشئ على React.js وجلب البيانات او الحالات من الموقع الرسمي disease.sh",
+  "workItem__live": "مشاهده"
 }
