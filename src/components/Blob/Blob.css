@@ -1,0 +1,8 @@
+.stopBlob1 {
+  stop-color: var(--theme-clr);
+  transition: var(--transition-300);
+}
+.stopBlob2 {
+  stop-color: var(--theme-clr-alt);
+  transition: var(--transition-300);
+}
