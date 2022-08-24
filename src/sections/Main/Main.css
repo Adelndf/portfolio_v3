@@ -65,7 +65,6 @@
   height: 30px;
   cursor: pointer;
   border-radius: 50%;
-  transition: var(--transition-150);
 }
 .main__themeSelect:active {
   transform: scale(0.9);

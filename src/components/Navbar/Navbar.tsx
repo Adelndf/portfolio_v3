@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import cookies from "js-cookie";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import useClickOutside from "../../hooks/useClickOutside";
+import { motion } from "framer-motion";
 
 const languages = [
   {
@@ -50,7 +51,12 @@ const Navbar = () => {
 
   return (
     <nav ref={ref} className="navbar">
-      <div className="navbar__container screen-width">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
+        className="navbar__container screen-width"
+      >
         <div className="navbar__left">
           <p onClick={() => window.top}>
             Adel<span>Dev</span>
@@ -111,7 +117,7 @@ const Navbar = () => {
         >
           <BurgerMenu toggle={toggle} setToggle={setToggle} />
         </div>
-      </div>
+      </motion.div>
 
       {/* mobile */}
       <div
