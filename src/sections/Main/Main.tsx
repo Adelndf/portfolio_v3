@@ -4,11 +4,21 @@ import { toBlue, toGreen, toRed } from "../../app/redux/theme/themeSlice";
 import "./Main.css";
 import Blob from "./../../components/Blob/Blob";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const Main = () => {
   const { theme } = useAppSelector((state) => state.theme);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
   const despatch = useAppDispatch();
   const { t } = useTranslation();
+
+  console.log(windowSize);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setWindowSize(window.innerWidth);
+    });
+  }, []);
 
   return (
     <section id="home" className="main screen-width">
@@ -100,28 +110,42 @@ const Main = () => {
           </motion.div>
         </div>
       </div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        drag
-        dragConstraints={{
-          top: -5,
-          left: -5,
-          right: 5,
-          bottom: 5,
-        }}
-        whileTap={{ cursor: "grabbing" }}
-        whileHover={{ cursor: "grab" }}
-        className="main__right"
-      >
-        <div className="main__blob">
-          <Blob />
+
+      {windowSize <= 768 && (
+        <div className="main__right">
+          <div className="main__blob">
+            <Blob mobile />
+          </div>
+          <div className="main__blob filter">
+            <Blob mobile />
+          </div>
         </div>
-        <div className="main__blob filter">
-          <Blob />
-        </div>
-      </motion.div>
+      )}
+
+      {windowSize > 768 && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          drag
+          dragConstraints={{
+            top: -5,
+            left: -5,
+            right: 5,
+            bottom: 5,
+          }}
+          whileTap={{ cursor: "grabbing" }}
+          whileHover={{ cursor: "grab" }}
+          className="main__right"
+        >
+          <div className="main__blob">
+            <Blob />
+          </div>
+          <div className="main__blob filter">
+            <Blob />
+          </div>
+        </motion.div>
+      )}
     </section>
   );
 };
