@@ -6,6 +6,3 @@
   stop-color: var(--theme-clr-alt);
   transition: var(--transition-300);
 }
-.blob__path {
-  cursor: grab;
-}

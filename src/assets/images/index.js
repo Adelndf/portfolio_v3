@@ -1,16 +1,17 @@
 // main icons
-export { default as imgCss } from "./css.png";
-export { default as imgExpress } from "./Expressjs.png";
-export { default as imgGit } from "./git.png";
-export { default as imgMongoDBIcon } from "./MongoDB-solo.png";
-export { default as imgMongoDB } from "./MongoDB.png";
-export { default as imgNext } from "./next.png";
-export { default as imgNode } from "./node.png";
-export { default as imgReact } from "./react.png";
-export { default as imgRedux } from "./redux.png";
-export { default as imgSass } from "./sass.png";
-export { default as imgTypescript } from "./typescript.png";
-export { default as imgJavascript } from "./JavaScript.png";
+export { default as imgCss } from "./css.svg";
+export { default as imgHtml } from "./html.svg";
+export { default as imgExpress } from "./express.svg";
+export { default as imgGit } from "./git.svg";
+export { default as imgMongoDB } from "./mongodb.svg";
+export { default as imgNext } from "./next.svg";
+export { default as imgNode } from "./node.svg";
+export { default as imgReact } from "./react.svg";
+export { default as imgRedux } from "./redux.svg";
+export { default as imgSass } from "./sass.svg";
+export { default as imgTypescript } from "./typescript.svg";
+export { default as imgJavascript } from "./javascript.svg";
+export { default as imgTailwindCss } from "./tailwindcss.svg";
 
 // websites images
 export { default as imgAdiBlog } from "./adiblog.png";

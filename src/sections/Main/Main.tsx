@@ -111,6 +111,8 @@ const Main = () => {
           right: 5,
           bottom: 5,
         }}
+        whileTap={{ cursor: "grabbing" }}
+        whileHover={{ cursor: "grab" }}
         className="main__right"
       >
         <div className="main__blob">
