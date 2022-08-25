@@ -12,8 +12,6 @@ const Main = () => {
   const despatch = useAppDispatch();
   const { t } = useTranslation();
 
-  console.log(windowSize);
-
   useEffect(() => {
     window.addEventListener("resize", () => {
       setWindowSize(window.innerWidth);
@@ -112,7 +110,7 @@ const Main = () => {
       </div>
 
       {windowSize <= 768 && (
-        <div className="main__right">
+        <div className="main__right mob">
           <div className="main__blob">
             <Blob mobile />
           </div>

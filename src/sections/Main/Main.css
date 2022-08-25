@@ -101,6 +101,9 @@
 
 .main__blob.filter {
   filter: blur(50px);
+  -webkit-filter: blur(50px);
+  -moz-filter: blur(50px);
+  -ms-filter: blur(50px);
 }
 
 @media screen and (max-width: 768px) {
@@ -159,5 +162,8 @@
   }
   .main__header > span {
     color: var(--theme-clr);
+  }
+  .main__right.mob {
+    top: -50px;
   }
 }
