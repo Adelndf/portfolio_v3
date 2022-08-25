@@ -2,6 +2,7 @@ import { WorkItem } from "../../components";
 import "./Work.css";
 import { useTranslation } from "react-i18next";
 import { imgAdiBlog, imgYT, imgPizza, imgCovid19 } from "../../assets/images";
+import { motion } from "framer-motion";
 
 const Work = () => {
   const { t } = useTranslation();
@@ -12,7 +13,7 @@ const Work = () => {
       webURL: "https://adi-blog.netlify.app/",
       gitHubURL: "https://github.com/Adelndf/AdiBlog-MERN",
       desc: t("work__adiBlogDesc"),
-      durations: 0.1,
+      delay: 0.1,
     },
     {
       image: imgYT,
@@ -20,7 +21,7 @@ const Work = () => {
       webURL: "https://chic-khapse-0dd2eb.netlify.app/",
       gitHubURL: "https://github.com/Adelndf",
       desc: t("work__YTDesc"),
-      durations: 0.2,
+      delay: 0.2,
     },
     {
       image: imgPizza,
@@ -28,7 +29,7 @@ const Work = () => {
       webURL: "https://eloquent-cori-1e1807.netlify.app/",
       gitHubURL: "https://github.com/Adelndf",
       desc: t("work__PizzaDesc"),
-      durations: 0.3,
+      delay: 0.3,
     },
     {
       image: imgCovid19,
@@ -36,19 +37,24 @@ const Work = () => {
       webURL: "https://vibrant-wilson-4381bb.netlify.app/",
       gitHubURL: "https://github.com/Adelndf/covid19-tracker",
       desc: t("work__Covid19Desc"),
-      durations: 0.4,
+      delay: 0.4,
     },
   ];
 
   return (
     <section id="work" className="work screen-width">
-      <h1 className="title">
+      <motion.h1
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="title"
+      >
         {t("work__title1")} <span>{t("work__titleSpan")}</span>{" "}
         {t("work__title2")}
-      </h1>
+      </motion.h1>
       <div className="work__container">
         {works.map((item, i) => {
-          const { image, title, webURL, gitHubURL, desc, durations } = item;
+          const { image, title, webURL, gitHubURL, desc, delay } = item;
           return (
             <WorkItem
               key={i}
@@ -57,7 +63,7 @@ const Work = () => {
               webURL={webURL}
               gitHubURL={gitHubURL}
               desc={desc}
-              durations={durations}
+              delay={delay}
             />
           );
         })}

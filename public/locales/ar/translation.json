@@ -21,5 +21,12 @@
   "work__Covid19Desc": "متعقب حالات كورونا، انشئ على React.js وجلب البيانات او الحالات من الموقع الرسمي disease.sh",
   "workItem__live": "مشاهده",
   "skills_titleSpan": "المهارات",
-  "skills_title": "والخبرات"
+  "skills_title": "والخبرات",
+  "contact_title1": "خذلك",
+  "contact_titleSpan": "قهوة",
+  "contact_title2": "وتواصل معي",
+  "contact_whatsApp": "واتس اب",
+  "contact_telegram": "تيليقرام",
+  "contact_twitter": "تويتر",
+  "contact_callMe": "اتصل بي"
 }

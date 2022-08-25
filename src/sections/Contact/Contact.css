@@ -1,0 +1,45 @@
+.contact {
+  min-height: 60vh;
+}
+.contact__container {
+  width: 100%;
+  max-width: 700px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.contact__box {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.contact__box > svg {
+  font-size: 2rem;
+  color: var(--gray-clr);
+  width: 40%;
+}
+.contact__box p {
+  font-size: 1rem;
+  color: var(--gray-clr);
+}
+.contact__box:hover {
+  border-color: var(--theme-clr);
+  background: var(--white-clr);
+}
+.contact__box:hover > svg,
+.contact__box:hover > p {
+  color: var(--black-clr);
+}
+
+@media screen and (max-width: 450px) {
+  .contact__box > svg {
+    width: 35px;
+  }
+}

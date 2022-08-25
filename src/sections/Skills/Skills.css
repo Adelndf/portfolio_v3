@@ -3,6 +3,7 @@
   width: 100%;
   max-width: 2000px;
   margin: 0 auto;
+  min-height: 80vh;
 }
 
 .skills__content {
@@ -17,8 +18,8 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   transition: var(--transition-300);
-  width: 100%;
-  max-width: 200px;
+  flex: 1;
+  min-width: 300px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -38,6 +39,8 @@
   font-size: 1rem;
   padding: 5px 10px;
   border-bottom: 1px solid #ddd;
+  color: var(--gray-clr);
+  text-align: center;
 }
 .skills__box > ul > li:last-child {
   border-bottom: none;
@@ -48,7 +51,37 @@
   width: 100%;
   position: relative;
   padding: 40px 0;
+  margin-top: 40px;
 }
+.skills__container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px;
+  background: linear-gradient(
+    to right,
+    rgb(252, 252, 255) 30%,
+    rgb(252, 252, 255, 0) 100%
+  );
+  z-index: 2;
+}
+.skills__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 300px;
+  background: linear-gradient(
+    to left,
+    rgb(252, 252, 255) 30%,
+    rgb(252, 252, 255, 0) 100%
+  );
+  z-index: 2;
+}
+
 .slick-slide {
   height: 100px !important;
 }
@@ -62,43 +95,7 @@
   filter: grayscale(0);
 }
 
-.skills__blob {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 500px;
-  height: 500px;
-  z-index: 2;
-}
-.skills__blob.left {
-  left: -200px;
-}
-.skills__blob.right {
-  right: -300px;
-}
-
-.skill__stopBlob1 {
-  stop-color: var(--theme-clr);
-  transition: var(--transition-300);
-}
-.skill__stopBlob2 {
-  stop-color: var(--theme-clr-alt);
-  transition: var(--transition-300);
-}
-
-.skills__blob .blob {
-  transform: scale(1.5);
-  transform-origin: center center;
-}
-
-.skills__blob #blobSvg {
-  filter: blur(45px);
-}
-
 @media screen and (max-width: 768px) {
-  .skills__blob {
-    display: none;
-  }
   .slick-slide img {
     width: 50px !important;
     height: 50px !important;
@@ -107,5 +104,19 @@
   .skills__content {
     gap: 30px;
     text-align: center;
+  }
+  .skills__container::before,
+  .skills__container::after {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .skills__container::before,
+  .skills__container::after {
+    width: 100px;
+  }
+  .skills__container {
+    margin-top: 0px;
   }
 }

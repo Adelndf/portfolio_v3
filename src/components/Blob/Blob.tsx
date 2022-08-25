@@ -13,8 +13,8 @@ const Blob = () => {
       <g transform="translate(163.2770652770996, -3.3955001831054688)">
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" className="stopBlob1"></stop>
-            <stop offset="100%" className="stopBlob2"></stop>
+            <stop offset="0%" className="mainStopBlob1"></stop>
+            <stop offset="100%" className="mainStopBlob2"></stop>
           </linearGradient>
         </defs>
         <path fill="url(#gradient)" className="blob__path">

@@ -1,0 +1,11 @@
+.footer {
+  background: #ddd;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer > p {
+  font-size: 0.8rem;
+  color: var(--gray-clr);
+}
