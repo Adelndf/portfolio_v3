@@ -23,7 +23,7 @@ const Contact = () => {
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.2 }}
-          href="https://wa.me/0538040776"
+          href="https://wa.me/+966538040776"
           target="_blank"
           className="contact__box"
           rel="noreferrer"
@@ -35,7 +35,7 @@ const Contact = () => {
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.3 }}
-          href="https://telegram.me/iAdeNDF"
+          href="https://telegram.me/@iAdeNDF"
           target="_blank"
           rel="noreferrer"
           className="contact__box"
