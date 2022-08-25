@@ -17,12 +17,12 @@ import {
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { useTranslation } from "react-i18next";
 
 const Blob = () => {
   return (
     <svg
       viewBox="0 0 800 500"
-      //   preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width="100%"
@@ -55,65 +55,52 @@ const Blob = () => {
 const imagesList = [
   {
     image: imgHtml,
-    name: "HTML",
   },
   {
     image: imgCss,
-    name: "CSS",
   },
   {
     image: imgTailwindCss,
-    name: "Tailwind",
   },
   {
     image: imgExpress,
-    // name: "Express",
   },
   {
     image: imgNext,
-    // name: "Next.js",
   },
   {
     image: imgNode,
-    // name: "Node.js",
   },
   {
     image: imgGit,
-    name: "Git",
   },
   {
     image: imgMongoDB,
-    name: "MongoDB",
   },
   {
     image: imgRedux,
-    name: "Redux",
   },
   {
     image: imgReact,
-    name: "React.js",
   },
   {
     image: imgSass,
-    name: "Sass",
   },
   {
     image: imgTypescript,
-    name: "Typescript",
   },
   {
     image: imgJavascript,
-    name: "Javascript",
   },
 ];
 
 const Skills = () => {
+  const { t } = useTranslation();
   const settings = {
     dots: false,
     arrows: false,
     infinite: true,
     slidesToShow: 6,
-    // slidesToScroll: 1,
     autoplay: true,
     speed: 5000,
     autoplaySpeed: 0.0,
@@ -123,21 +110,18 @@ const Skills = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 4,
-          //   slidesToScroll: 3,
         },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 3,
-          //   slidesToScroll: 2,
         },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 3,
-          //   slidesToScroll: 1,
         },
       },
     ],
@@ -146,8 +130,39 @@ const Skills = () => {
   return (
     <div id="skills" className="skills">
       <h1 className="title">
-        <span>Skills</span> & Experience
+        <span>{t("skills_titleSpan")}</span> {t("skills_title")}
       </h1>
+      <div className="skills__content screen-width">
+        <div className="skills__box">
+          <h1>Frontend</h1>
+          <ul>
+            <li>HTML / CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React.js</li>
+            <li>Next.js</li>
+          </ul>
+        </div>
+        <div className="skills__box">
+          <h1>Backend</h1>
+          <ul>
+            <li>Node</li>
+            <li>Express</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+          </ul>
+        </div>
+        <div className="skills__box">
+          <h1>Other</h1>
+          <ul>
+            <li>Redux & Redux toolkit</li>
+            <li>MongoDB</li>
+            <li>Firebase</li>
+            <li>Git</li>
+            <li>TailwindCSS</li>
+          </ul>
+        </div>
+      </div>
       <div className="skills__container">
         <div className="skills__blob left">
           <Blob />

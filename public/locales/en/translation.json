@@ -21,5 +21,8 @@
   "work__PizzaDesc": "Frontend restaurant, no functionality only frontend basic HTML | CSS | JAVASCRIPT, beautiful UI.",
   "work__Covid19Desc": "Build in React.js, fetching the cases (data) from (disease.sh) API, & using react context api.",
 
-  "workItem__live": "Live"
+  "workItem__live": "Live",
+
+  "skills_titleSpan": "Skills",
+  "skills_title": "& Experience"
 }
