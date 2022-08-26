@@ -3,9 +3,10 @@
   flex-direction: column;
   background: var(--white-clr);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
   transition: var(--transition-300);
+  cursor: default;
 }
 .workItem__img {
   width: 100%;
@@ -76,5 +77,11 @@
     box-shadow: var(--btn-shadow);
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .workItem {
+    border-radius: 20px;
   }
 }

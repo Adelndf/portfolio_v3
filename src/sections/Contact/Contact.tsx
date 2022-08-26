@@ -35,7 +35,7 @@ const Contact = () => {
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.3 }}
-          href="https://telegram.me/@iAdeNDF"
+          href="https://telegram.me/iAdelNDF"
           target="_blank"
           rel="noreferrer"
           className="contact__box"

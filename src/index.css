@@ -88,6 +88,7 @@ html {
   max-width: var(--max-width);
   margin: 0 auto;
 }
+
 @media screen and (max-width: 1201px) {
   .screen-width {
     padding: 0 20px;

@@ -7,3 +7,9 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .work {
+    padding: 40px 20px;
+  }
+}
