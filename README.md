@@ -6,6 +6,6 @@ This project was build with React.js [Create React App](https://github.com/faceb
 
 The live website is available you can visit: [By Clicking Here](https://iadeldev.netlify.app/)
 
-## Ask me in Twitter
+## Ask me on Twitter
 
 [AdelDev Twitter](https://twitter.com/iAdelDev).
