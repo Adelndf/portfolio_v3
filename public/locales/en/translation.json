@@ -8,7 +8,12 @@
 
   "main_name1": "Adel",
   "main_name2": "Developer",
-  "main_nameSpan": "I Do Frontend Development",
+  "main_nameSpan": "I Do",
+  "main_iDo1": "Frontend Development.",
+  "main_iDo2": "React.js & Next.js.",
+  "main_iDo3": "Node & Express.",
+  "main_iDo4": "Web Development.",
+
   "main_desc": "All started with a simple console.log('Hello World') My plan is to make my development skills better and reach new level every day with coding to build awesome apps.",
   "main_theme": "before we keep going, pick your",
   "main_themeSpan": "favorite theme..",

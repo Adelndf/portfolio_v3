@@ -5,12 +5,26 @@ import "./Main.css";
 import Blob from "./../../components/Blob/Blob";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const Main = () => {
   const { theme } = useAppSelector((state) => state.theme);
   const [windowSize, setWindowSize] = useState(window.innerWidth);
   const despatch = useAppDispatch();
   const { t } = useTranslation();
+  const loopWords = [
+    t("main_iDo1"),
+    t("main_iDo2"),
+    t("main_iDo3"),
+    t("main_iDo4"),
+  ];
+  const { text } = useTypewriter({
+    words: loopWords,
+    loop: 0,
+    typeSpeed: 70,
+    deleteSpeed: 50,
+    delaySpeed: 2000,
+  });
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -41,7 +55,8 @@ const Main = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.3 }}
           >
-            {t("main_nameSpan")}
+            {t("main_nameSpan")} {text}
+            <Cursor cursorStyle="|" />
           </motion.span>
         </div>
         <motion.div
