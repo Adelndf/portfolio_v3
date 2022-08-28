@@ -2,9 +2,9 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <footer className="footer">
       <p>© 2022 Adel Dev, All rights reserved.</p>
-    </div>
+    </footer>
   );
 };
 

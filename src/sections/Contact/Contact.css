@@ -1,5 +1,6 @@
 .contact {
-  min-height: 60vh;
+  height: 60vh;
+  max-height: 800px;
 }
 .contact__container {
   width: 100%;

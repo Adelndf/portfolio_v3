@@ -96,7 +96,7 @@ const Skills = () => {
   };
 
   return (
-    <div id="skills" className="skills">
+    <section id="skills" className="skills">
       <motion.h1
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -159,7 +159,7 @@ const Skills = () => {
           ))}
         </Slider>
       </div>
-    </div>
+    </section>
   );
 };
 

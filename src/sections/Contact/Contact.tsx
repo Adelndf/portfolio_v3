@@ -8,7 +8,7 @@ const Contact = () => {
   const { t } = useTranslation();
 
   return (
-    <div id="contact" className="contact">
+    <section id="contact" className="contact">
       <motion.h1
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -66,7 +66,7 @@ const Contact = () => {
           <p>{t("contact_callMe")}</p>
         </motion.a>
       </div>
-    </div>
+    </section>
   );
 };
 
