@@ -1,5 +1,5 @@
 .skills {
-  padding: 40px 0;
+  padding: 100px 0;
   width: 100%;
   max-width: 2000px;
   margin: 0 auto;
@@ -118,11 +118,7 @@
   .skills__container {
     margin-top: 0px;
   }
-}
-@media screen and (min-width: 451px) {
   .skills {
-    height: 80vh;
-    max-height: 1100px;
-    padding: 50px 0;
+    padding: 40px 0;
   }
 }

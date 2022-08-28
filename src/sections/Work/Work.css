@@ -1,5 +1,5 @@
 .work {
-  padding: 40px 0px;
+  padding: 100px 0px;
 }
 .work__container {
   display: grid;
@@ -7,17 +7,8 @@
   gap: 20px;
 }
 
-@media screen and (max-width: 768px) {
-}
 @media screen and (max-width: 1201px) {
   .work {
     padding: 40px 20px;
-  }
-}
-
-@media screen and (min-width: 451px) {
-  .work {
-    height: 80vh;
-    max-height: 1100px;
   }
 }
