@@ -10,6 +10,7 @@ i18n
   .init({
     supportedLngs: ["en", "ar"],
     fallbackLng: "en",
+    debug: true,
     detection: {
       order: ["cookie", "localStorage", "htmlTag", "path", "subdomain"],
       caches: ["cookie"],
@@ -18,7 +19,7 @@ i18n
       loadPath: "/locales/{{lng}}/translation.json",
     },
     react: {
-      useSuspense: false,
+      useSuspense: true,
     },
   });
 
