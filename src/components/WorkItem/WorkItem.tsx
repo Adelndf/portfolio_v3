@@ -1,27 +1,13 @@
 import "./WorkItem.css";
 import { AiFillGithub } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+import { IWork } from "../../sections/Work/WorkList";
 
-interface Props {
-  image: string;
-  title: string;
-  webURL: string;
-  gitHubURL: string;
-  desc: string;
-  delay: number;
-}
-
-const WorkItem = ({ image, title, webURL, gitHubURL, desc, delay }: Props) => {
+const WorkItem = ({ image, title, webURL, gitHubURL, desc }: IWork) => {
   const { t } = useTranslation();
 
   return (
-    <motion.div
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.3, delay: delay }}
-      className="workItem"
-    >
+    <div className="workItem">
       <img src={image} alt={title} className="workItem__img" />
       <div className="workItem__info">
         <div className="workItem__title">
@@ -35,19 +21,21 @@ const WorkItem = ({ image, title, webURL, gitHubURL, desc, delay }: Props) => {
             >
               {t("workItem__live")}
             </a>
-            <a
-              className="workItem__iconLink"
-              target="_blank"
-              href={gitHubURL}
-              rel="noreferrer"
-            >
-              <AiFillGithub />
-            </a>
+            {gitHubURL ? (
+              <a
+                className="workItem__iconLink"
+                target="_blank"
+                href={gitHubURL}
+                rel="noreferrer"
+              >
+                <AiFillGithub />
+              </a>
+            ) : null}
           </div>
         </div>
-        <div className="workItem__desc">{desc}</div>
+        <div className="workItem__desc">{t(desc)}</div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

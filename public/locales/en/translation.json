@@ -37,5 +37,8 @@
   "contact_whatsApp": "WhatsApp",
   "contact_telegram": "Telegram",
   "contact_twitter": "Twitter",
-  "contact_callMe": "Call me"
+  "contact_callMe": "Call me",
+
+  "work__passticketsDesc": "PassTickets platform is an easy and fast way to sell and organize events across Saudi Arabia",
+  "work__passDashboardDesc": "Pass Dashboard is a special site only for organizations and event owners in Pass Tech to coordinate and arrange their own events."
 }

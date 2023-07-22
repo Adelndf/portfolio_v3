@@ -18,3 +18,5 @@ export { default as imgAdiBlog } from "./adiblog.png";
 export { default as imgYT } from "./ytClone.png";
 export { default as imgPizza } from "./pizza.png";
 export { default as imgCovid19 } from "./covid19.png";
+export { default as imgPassDashboard } from "./pass-dashboard.png";
+export { default as imgPassTickets } from "./pass-tickets.png";
